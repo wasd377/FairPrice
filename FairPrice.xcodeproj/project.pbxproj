@@ -14,6 +14,9 @@
 		826B62962B10FCC200ABC0A0 /* FairPriceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826B62952B10FCC200ABC0A0 /* FairPriceTests.swift */; };
 		826B62A02B10FCC200ABC0A0 /* FairPriceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826B629F2B10FCC200ABC0A0 /* FairPriceUITests.swift */; };
 		826B62A22B10FCC200ABC0A0 /* FairPriceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826B62A12B10FCC200ABC0A0 /* FairPriceUITestsLaunchTests.swift */; };
+		826B62AF2B10FD3F00ABC0A0 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826B62AE2B10FD3F00ABC0A0 /* ViewModel.swift */; };
+		826B62B12B11367B00ABC0A0 /* TovarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826B62B02B11367B00ABC0A0 /* TovarView.swift */; };
+		82D378BB2B11E4C9002FFA3E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D378BA2B11E4C9002FFA3E /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		826B629B2B10FCC200ABC0A0 /* FairPriceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FairPriceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		826B629F2B10FCC200ABC0A0 /* FairPriceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FairPriceUITests.swift; sourceTree = "<group>"; };
 		826B62A12B10FCC200ABC0A0 /* FairPriceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FairPriceUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		826B62AE2B10FD3F00ABC0A0 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		826B62B02B11367B00ABC0A0 /* TovarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TovarView.swift; sourceTree = "<group>"; };
+		82D378BA2B11E4C9002FFA3E /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +101,10 @@
 			isa = PBXGroup;
 			children = (
 				826B62842B10FCBF00ABC0A0 /* FairPriceApp.swift */,
+				82D378BA2B11E4C9002FFA3E /* Model.swift */,
 				826B62862B10FCBF00ABC0A0 /* ContentView.swift */,
+				826B62B02B11367B00ABC0A0 /* TovarView.swift */,
+				826B62AE2B10FD3F00ABC0A0 /* ViewModel.swift */,
 				826B62882B10FCC200ABC0A0 /* Assets.xcassets */,
 				826B628A2B10FCC200ABC0A0 /* Preview Content */,
 			);
@@ -257,7 +266,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82D378BB2B11E4C9002FFA3E /* Model.swift in Sources */,
 				826B62872B10FCBF00ABC0A0 /* ContentView.swift in Sources */,
+				826B62B12B11367B00ABC0A0 /* TovarView.swift in Sources */,
+				826B62AF2B10FD3F00ABC0A0 /* ViewModel.swift in Sources */,
 				826B62852B10FCBF00ABC0A0 /* FairPriceApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +432,8 @@
 				DEVELOPMENT_TEAM = CR68PP2Z3F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Честная Цена Россия";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -430,11 +444,14 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = temp.FairPrice;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FGU.FairPrice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -449,6 +466,8 @@
 				DEVELOPMENT_TEAM = CR68PP2Z3F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Честная Цена Россия";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -459,11 +478,14 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = temp.FairPrice;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FGU.FairPrice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
