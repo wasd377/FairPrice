@@ -12,31 +12,41 @@ struct TovarView: View {
     @Binding var tovar: Tovar
     
     @EnvironmentObject var vm: ViewModel
+    var tovarIndex = 0
+    
+    mutating func getIndex() -> Int? {
+        return vm.tovary.firstIndex(where: {$0.id == tovar.id})
+    }
     
     var body: some View {
         HStack {
-           TextField("\(tovar.name)", text: $tovar.name)
-                .frame(width: 100)
-                .foregroundColor(.secondary)
-            HStack {
-                TextField("Цена", text: $tovar.price)
-                    .multilineTextAlignment(.trailing)
-                    .keyboardType(.numberPad)
-                
-                Text("₽ ")
-                    .frame(alignment: .trailing)
+            VStack {
+                TextField("Товар \(tovarIndex+1)", text: $tovar.name)
+                    .textFieldStyle(.roundedBorder)
+                    .frame(width: .infinity)
+                    .foregroundColor(.secondary)
+                HStack {
+                    HStack {
+                        TextField("Цена", text: $tovar.price)
+                            .multilineTextAlignment(.trailing)
+                            .keyboardType(.numberPad)
+                        
+                        Text("₽ ")
+                            .frame(alignment: .trailing)
+                    }
+                    .border(.black)
+                    
+                    HStack {
+                        
+                        TextField("Кол-во", text: $tovar.qty)
+                            .multilineTextAlignment(.trailing)
+                            .keyboardType(.numberPad)
+                        
+                        Text("\(vm.qtyShorts["\(vm.selectedQtyType)"]!) ")
+                    }
+                    .border(.black)
+                }
             }
-            .border(.black)
-            
-            HStack {
-                
-                TextField("Количество", text: $tovar.qty)
-                    .multilineTextAlignment(.trailing)
-                    .keyboardType(.numberPad)
-                
-                Text("\(vm.qtyShorts["\(vm.selectedQtyType)"]!) ")
-            }
-            .border(.black)
             
             Text(Double(tovar.price) ?? 0 > 0 && Double(tovar.qty) ?? 0 > 0 ? ("\(Double((Double(tovar.price) ?? 0)/(Double(tovar.qty) ?? 0)), specifier: "%.2f")/\(vm.qtyShorts["\(vm.selectedQtyType)"] ?? "")") : "? / \(vm.qtyShorts["\(vm.selectedQtyType)"] ?? "")")
             
@@ -52,7 +62,7 @@ struct TovarView: View {
 
 struct TovarView_Previews: PreviewProvider {
     
-    @State static var tovar = Tovar(id: UUID(), name: "Tovar1", price: "1337", qty: "13", bestOption: true)
+    @State static var tovar = Tovar(id: UUID(), name: "Товар 1", price: "", qty: "13", bestOption: true)
     
     static var previews: some View {
         TovarView(tovar: $tovar)

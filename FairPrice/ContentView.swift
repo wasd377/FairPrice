@@ -43,6 +43,7 @@ struct ContentView: View {
         
         NavigationView {
                 VStack(alignment: .leading) {
+                    
                     HStack {
                         Text("Сравнить цену за")
                         Menu("\(vm.selectedQtyType)") {
@@ -58,15 +59,24 @@ struct ContentView: View {
                     List {
                         ForEach($vm.tovary, id: \.id) { $tovar in
                             TovarView(tovar: $tovar)
+                                .listRowInsets(.init())
                         }
                         .onDelete(perform: vm.delete)
+                        Text("Введите данные разных товаров и узнайте их честную цену за килограмм, литр или штуку, для того, чтобы сделать правильный выбор при покупке!")
+                            .padding()
+                            
+                            
                     }
-                    .listStyle(PlainListStyle())
+                    .listStyle(.plain)
+                    
                     
                 
                     
                     HStack {
                         Spacer()
+                        Button("Добавить товар") {
+                            vm.tovary.append(Tovar(id:UUID(),name: "Товар \(vm.tovary.count+1)", price: "", qty: "", bestOption: false))
+                        }
                         Button("Очистить") {
                             vm.clearAll()
                         }

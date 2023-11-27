@@ -20,10 +20,8 @@ class ViewModel: ObservableObject, Identifiable {
     
     init() {
         tovary = [
-            Tovar(id: UUID(), name: "Товар 1", price: "", qty: "", bestOption: false),
-            Tovar(id: UUID(), name: "Товар 2", price: "", qty: "", bestOption: false),
-            Tovar(id: UUID(), name: "Товар 3", price: "", qty: "", bestOption: false),
-            Tovar(id: UUID(), name: "Товар 4", price: "", qty: "", bestOption: false)
+            Tovar(id: UUID(), name: "", price: "", qty: "", bestOption: false),
+            Tovar(id: UUID(), name: "", price: "", qty: "", bestOption: false),
         ]
     }
     
@@ -32,12 +30,18 @@ class ViewModel: ObservableObject, Identifiable {
     }
     
     func clearAll() {
-        tovary = [
-            Tovar(id: UUID(), name: "Товар 1", price: "", qty: "", bestOption: false),
-            Tovar(id: UUID(), name: "Товар 2", price: "", qty: "", bestOption: false),
-            Tovar(id: UUID(), name: "Товар 3", price: "", qty: "", bestOption: false),
-            Tovar(id: UUID(), name: "Товар 4", price: "", qty: "", bestOption: false)
-        ]
+        
+        for i in tovary.indices {
+       
+            tovary[i].id = UUID()
+            tovary[i].name = "Товар \(i+1)"
+            tovary[i].price = ""
+            tovary[i].qty = ""
+            tovary[i].bestOption = false
+            
+            }
+        
+
     }
     
     func calcMinCost() {
