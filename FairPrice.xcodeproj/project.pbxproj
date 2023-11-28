@@ -17,6 +17,7 @@
 		826B62AF2B10FD3F00ABC0A0 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826B62AE2B10FD3F00ABC0A0 /* ViewModel.swift */; };
 		826B62B12B11367B00ABC0A0 /* TovarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826B62B02B11367B00ABC0A0 /* TovarView.swift */; };
 		82D378BB2B11E4C9002FFA3E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D378BA2B11E4C9002FFA3E /* Model.swift */; };
+		82D378BD2B15DAAB002FFA3E /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D378BC2B15DAAB002FFA3E /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		826B62AE2B10FD3F00ABC0A0 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		826B62B02B11367B00ABC0A0 /* TovarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TovarView.swift; sourceTree = "<group>"; };
 		82D378BA2B11E4C9002FFA3E /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		82D378BC2B15DAAB002FFA3E /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				826B62862B10FCBF00ABC0A0 /* ContentView.swift */,
 				826B62B02B11367B00ABC0A0 /* TovarView.swift */,
 				826B62AE2B10FD3F00ABC0A0 /* ViewModel.swift */,
+				82D378BC2B15DAAB002FFA3E /* SwiftUIView.swift */,
 				826B62882B10FCC200ABC0A0 /* Assets.xcassets */,
 				826B628A2B10FCC200ABC0A0 /* Preview Content */,
 			);
@@ -268,6 +271,7 @@
 			files = (
 				82D378BB2B11E4C9002FFA3E /* Model.swift in Sources */,
 				826B62872B10FCBF00ABC0A0 /* ContentView.swift in Sources */,
+				82D378BD2B15DAAB002FFA3E /* SwiftUIView.swift in Sources */,
 				826B62B12B11367B00ABC0A0 /* TovarView.swift in Sources */,
 				826B62AF2B10FD3F00ABC0A0 /* ViewModel.swift in Sources */,
 				826B62852B10FCBF00ABC0A0 /* FairPriceApp.swift in Sources */,

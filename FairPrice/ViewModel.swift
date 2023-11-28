@@ -15,7 +15,8 @@ class ViewModel: ObservableObject, Identifiable {
     
     @Published var selectedQtyType = "килограмм"
     @Published var qtyTypes = ["килограмм", "литр", "штуку"]
-    @Published var qtyShorts = ["килограмм" : "кг", "литр" : "л", "штуку" : "шт"]
+    @Published var qtyShorts = ["килограмм" : "г", "литр" : "мл", "штуку" : "шт"]
+    @Published var qtyFull = ["килограмм" : "кг", "литр" : "л", "штуку" : "шт"]
     @Published var minCost = 0.0
     
     init() {
@@ -45,6 +46,8 @@ class ViewModel: ObservableObject, Identifiable {
     }
     
     func calcMinCost() {
+        
+        minCost = 0.0
             
             for tovar in tovary {
                 if (minCost == 0 || minCost > (Double(tovar.price) ?? 0) / (Double(tovar.qty) ?? 0)) && (Double(tovar.price) ?? 0) > 0 && (Double(tovar.qty) ?? 0) > 0  {
